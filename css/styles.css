@@ -1,0 +1,482 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Container
+/* 2. Menu
+/* 3. Header
+/* 4. Quem somos
+/* 5. Nossos cursos
+/* 6. Planos
+/* 7. Vantagens
+/* 8. Newsletter
+/* 9. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+:root {
+	--ff-primary: "Nunito", Helvetica, Arial, sans-serif;
+
+	--clr-1: #049A40;
+	--clr-2: #0bf96a;
+	--clr-3: #e10bf9;
+	--clr-4: #f3a0fd;
+	--clr-white: #f5f5f5;
+
+}
+
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--clr-white);
+	font-family: var(--ff-primary);
+}
+
+a, a:hover, a:active, a:link, a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+hr {
+	border: none;
+	background-color: var(--clr-3);
+	height: .1rem;
+	width: 8rem;	
+}
+
+.box {
+	max-width: 60rem;	
+	margin: auto auto;
+	min-height: 80vh;
+	
+	
+}
+
+p {
+	line-height: 1.4rem;
+	padding: 0 1rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+	text-align: center;
+	font-weight: 400;
+	margin: 1rem;
+}
+
+.section__titulo {
+	font-size: 2.5rem;
+	text-align: center;	
+	margin: 2rem 0;
+}
+
+img { /*Faz com que a imagem fique responsiva*/
+	display: block;
+	max-width: 100%;
+	margin: auto;
+} 
+
+/**********************************/
+/* 2. Menu
+/**********************************/
+
+
+
+.menu {
+	background-color: var(--clr-2);	
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 80px;
+	width: 100%;	
+	margin: 0 auto;
+	flex-wrap: wrap;
+	font-size: 1.1rem;	
+}
+
+@media (max-width: 850px) {
+	.menu {
+		min-height: 80px;
+		font-size:.9rem;
+		
+	}	
+	.menu__logo {
+		display: none;
+	}
+
+}
+
+@media (max-width: 650px) {
+	.menu {
+		min-height: 80px;
+		font-size:.7rem;
+		transition: .5s;
+		
+	}	
+	.menu__logo {
+		display: none;
+	}
+
+}
+
+.menu__logo {
+	margin: 1rem;
+	max-width: 10rem;
+}
+
+.nav__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nav__link {
+	padding: 2rem 1rem;
+}
+
+.nav__link:hover, .nav__link:active {
+	color: var(--clr-white);
+	transition: 150ms;
+}
+
+/**********************************/
+/* 3. Header
+/**********************************/
+
+.intro {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 5% auto;
+	padding: 2.5rem, 1rem;
+}
+
+/**********************************/
+/* 4. Quem somos
+/**********************************/
+
+	
+
+.about {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-bottom: 150px;
+				
+}
+
+.about__text {
+	flex: 6 1 16rem; /* flex: flex-grow flex-shrink flex-basis */	
+	margin: 3rem;	
+	text-align: justify;
+	font-weight: 400;
+}
+
+.about__img {	
+	flex: 1 2 15rem; /* flex: flex-grow flex-shrink flex-basis */
+}
+
+
+
+/**********************************/
+/* 5. Nossos cursos
+/**********************************/
+
+
+.cursos {
+	display: flex;	
+	flex-wrap: wrap;
+	justify-content: center;	
+	align-items: flex-end;
+	max-width: 60rem;
+	min-height: 80vh;	
+	margin: 2rem auto;
+	padding-bottom: 150px;
+	
+	
+}
+
+
+.cursos-c {
+	max-width: 15rem; /*Definindo um tamanho mínimo fixo o container quebra*/
+	margin: auto 2rem;
+	
+}
+
+
+/**********************************/
+/* 6. Planos
+/**********************************/
+
+.planos-bg {
+	background-color: var(--clr-4);	
+	padding: 100px;	
+	
+}
+
+.planos-c {
+	max-width: 60rem;
+	margin: 1rem auto;
+	display: flex;
+	flex-wrap: wrap;	
+	justify-content: center;
+	align-items: flex-end;		
+}
+.planos {
+	width: 17rem;
+	margin: .6rem;
+	padding: .6rem;
+	border: 2px solid var(--clr-2);
+	border-radius: 5px;
+}
+
+.planos__titulo {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	margin: .6rem auto;
+}
+
+.planos__preco {
+	font-size: 3rem;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+
+.planos__preco sup {
+	position: relative;
+	font-size: 1.5rem;
+	top: -1.2rem;
+}
+
+.planos__divisor {
+	background-color: var(--clr-2);
+	width: 1.25rem;
+	margin: .3rem auto;
+	
+}
+
+.planos__lista {
+	max-width: 12.2rem;
+	margin: 0 auto;
+}
+
+.planos__lista__item {
+	margin: .6rem 0;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+	
+}
+
+.planos__lista__item::before {
+	content: "";
+	display: block;
+	width: .3rem;
+	min-height: .3rem;
+	background-color: var(--clr-2);
+	border-radius: 5px;
+	margin-right: .3rem;
+}
+
+.planos__btn-comprar {
+	display: block;
+	max-width: 11rem;
+	font-size: 2rem;	
+	margin: .9rem auto;
+	padding: .5rem;
+	text-align: center;	
+	text-transform: uppercase;	
+	border-radius: 5px;
+}
+
+.planos:last-child {
+	background-color: var(--clr-2);
+}
+
+.planos:last-child {
+	border: 2px solid black
+}
+
+.planos:last-child .planos__lista__item::before, .planos:last-child .planos__divisor {
+	background: var(--clr-3);
+}
+
+.planos__btn-comprar:hover {
+	font-weight: bold;
+} 
+
+@media (max-width: 800px) {
+	.planos:nth-child(3) {
+		order: -2;
+	}
+	.planos:nth-child(2) {
+		order: -1;
+	}
+
+}
+
+/**********************************/
+/* 7. Vantagens
+/**********************************/
+
+#vantagens {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.vantagem {
+	max-width: 15rem;	
+	padding: 50px 0;
+	margin: .6rem;	
+}
+
+.vantagem__titulo{
+	font-weight: bold;
+	font-size: 1.7rem;
+	margin-bottom: .3rem;
+	margin-left: .6rem;
+
+}
+
+.vantagem__titulo::before {
+	content: "";
+	display: inline-block;
+	width: .6rem;
+	min-height: 1.6rem;
+	margin-right: .3px;
+}
+
+.vantagem:nth-of-type(3n + 1) .vantagem__titulo::before {  /*n = 0, depois 1, depois 2 e sucessivamente */
+	background-color: var(--clr-2);
+}
+
+.vantagem:nth-of-type(3n + 2) .vantagem__titulo::before {
+	background-color: var(--clr-3);
+}
+
+.vantagem:nth-of-type(3n + 3) .vantagem__titulo::before {
+	background-color: var(--clr-4);
+}
+
+@media (max-width: 28rem) {
+	.vantagem {
+		max-width: 13.7rem;
+	}
+}
+
+/**********************************/
+/* 8. Newsletter
+/**********************************/
+
+.newsletter-bg {
+	background-color: var(--clr-2);
+}
+
+.newsletter-c {
+	max-width: 60rem;
+	margin: auto;
+	padding: 3rem 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newsletter-info {
+	padding-left: .6rem;
+	flex: 1 1 16rem;
+}
+
+.newsletter-info__titulo {
+	font-size: 2.62rem;
+	font-weight: bold;
+}
+
+.newsletter-info__descricao {
+	font-style: italic;
+	margin: .5rem auto;
+	font-size: 1.2rem;
+}
+
+.newsletter-form {
+	flex: 2 1 16rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.newsletter-form__input {
+	font-size: 1.5rem;
+	width: 20rem;
+	min-height: 4rem;	
+	color: black;
+	font-style: italic;
+	font-family: var(--ff-primary);
+	border: .3rem solid var(--clr-3);
+	border-radius: 0%;
+
+}
+
+.newsletter-form__submit {
+	width: 12rem;
+	min-height: 4rem;
+	font-family: var(--ff-primary);
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	background: var(--clr-3);
+	color: white;
+	cursor: pointer;
+	border: none;	
+	padding: .9rem;
+	border-radius: 0%;	
+}
+
+.newsletter-form__submit:hover {
+	background: var(--clr-4);		
+}
+
+.newsletter-form__input:hover {
+	border: .3rem solid var(--clr-4);
+}
+
+@media (max-width: 37rem) {
+	.newsletter-form__submit, .newsletter-form__input, .newsletter-info, .newsletter-info__titulo {
+		margin: auto;
+	}
+}
+
+
+/**********************************/
+/* 9. Footer
+/**********************************/
+
+.footer {
+	background: var(--clr-4);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 55px calc((100% - 60rem) / 2);
+}
+
+.footer__copyright, .footer__logo {
+	padding-left: .6rem;
+	padding-right: .6rem;	
+}
+
+
+
